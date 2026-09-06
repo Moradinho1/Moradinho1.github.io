@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Omri Morad — Industrial Engineering & Management portfolio: data, operations and optimization projects." />
+  <title>Omri Morad | Data, Operations & Optimization</title>
+  <style>
+    :root{--bg:#f7f9fc;--ink:#132238;--muted:#627083;--card:#ffffff;--line:#dfe6ef;--accent:#0f6cbd;--accent2:#0b4f87;--soft:#eaf4ff;--green:#16856b;--shadow:0 18px 50px rgba(24,42,68,.10)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(247,249,252,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,230,239,.85)}
+    .navin{height:66px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.02em}.navlinks{display:flex;gap:24px;font-size:14px;color:var(--muted)}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--ink)}
+    .hero{padding:88px 0 64px}.eyebrow{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}h1{font-size:clamp(42px,7vw,78px);line-height:1.02;letter-spacing:-.055em;margin:14px 0 22px;max-width:920px}.lead{font-size:clamp(18px,2.2vw,23px);color:var(--muted);max-width:760px;margin:0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border-radius:11px;text-decoration:none;font-weight:750;font-size:14px;border:1px solid var(--line);background:#fff}.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}.btn:hover{transform:translateY(-1px)}
+    .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:54px}.metric{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 8px 28px rgba(24,42,68,.05)}.metric strong{display:block;font-size:16px}.metric span{font-size:13px;color:var(--muted)}
+    section{padding:54px 0}.section-kicker{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.1;margin:10px 0 14px}.section-lead{color:var(--muted);max-width:760px;margin:0 0 28px}
+    .project{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.project-head{padding:34px 34px 24px;border-bottom:1px solid var(--line)}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{font-size:12px;font-weight:750;padding:6px 9px;border-radius:999px;background:var(--soft);color:var(--accent2);border:1px solid #d3e8fb}
+    .project-grid{display:grid;grid-template-columns:1.05fr .95fr}.content{padding:32px 34px}.content h3{font-size:21px;margin:0 0 12px;letter-spacing:-.02em}.content p{color:var(--muted);margin:0 0 20px}.bullet{display:grid;gap:13px}.bullet div{display:flex;gap:12px}.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px;flex:0 0 auto}.bullet b{display:block}.bullet span{color:var(--muted);font-size:14px}
+    .visual{padding:30px;background:linear-gradient(145deg,#edf5fc,#f9fbfd);border-left:1px solid var(--line);display:flex;align-items:center}.sheet{width:100%;background:#fff;border:1px solid #cfd9e6;border-radius:14px;overflow:hidden;box-shadow:0 18px 45px rgba(23,48,77,.14)}.sheetbar{height:34px;background:#1f6f43;color:white;display:flex;align-items:center;padding:0 12px;font-size:12px;font-weight:750}.cells{display:grid;grid-template-columns:1.1fr repeat(3,1fr);font-size:11px}.cell{padding:9px 8px;border-right:1px solid #e3e8ef;border-bottom:1px solid #e3e8ef;min-height:36px}.cell.h{font-weight:800;background:#eef3f8}.cell.accent{font-weight:800;background:#fff2a8}.solver{margin:14px;padding:14px;border-radius:10px;background:#f4f7fb;border:1px solid #dce5ef}.solver-row{display:flex;justify-content:space-between;font-size:11px;padding:4px 0}.solver-row strong{color:var(--green)}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.feature{padding:20px;background:#fff;border:1px solid var(--line);border-radius:16px}.feature .n{font-size:12px;color:var(--accent);font-weight:800}.feature h4{margin:8px 0 5px}.feature p{font-size:14px;color:var(--muted);margin:0}
+    .result{margin-top:26px;padding:22px;border-radius:16px;background:#0f2035;color:#fff;display:flex;justify-content:space-between;gap:20px;align-items:center}.result p{margin:3px 0 0;color:#c8d5e4;font-size:14px}.result .tag{white-space:nowrap;background:#173653;border:1px solid #31516e;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:34px}.about p{color:var(--muted)}.skillbox{display:flex;flex-wrap:wrap;gap:9px;align-content:flex-start}.skill{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:10px;font-size:13px;font-weight:700}
+    footer{padding:48px 0 64px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:50px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:var(--ink);font-weight:700;text-decoration:none}
+    @media(max-width:820px){.navlinks{display:none}.quick,.three{grid-template-columns:1fr 1fr}.project-grid,.about{grid-template-columns:1fr}.visual{border-left:0;border-top:1px solid var(--line)}.hero{padding-top:60px}.result{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.wrap{width:min(100% - 24px,1120px)}.quick,.three{grid-template-columns:1fr}.project-head,.content{padding-left:22px;padding-right:22px}.visual{padding:20px}h1{font-size:46px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap navin"><div class="brand">OMRI MORAD</div><div class="navlinks"><a href="#projects">Projects</a><a href="#about">About</a><a href="mailto:omrim2939@gmail.com">Contact</a></div></div></nav>
+
+  <main>
+    <header class="hero"><div class="wrap">
+      <div class="eyebrow">Industrial Engineering & Management</div>
+      <h1>Data, operations & optimization — built into practical models.</h1>
+      <p class="lead">I’m Omri Morad, an Industrial Engineering & Management student at Ruppin Academic Center. I build analytical models that turn operational rules, business data and constraints into clear, usable decisions.</p>
+      <div class="actions"><a class="btn primary" href="#projects">View project</a><a class="btn" href="https://github.com/Moradinho1" target="_blank" rel="noreferrer">GitHub profile ↗</a><a class="btn" href="mailto:omrim2939@gmail.com">Email me</a></div>
+      <div class="quick"><div class="metric"><strong>Excel</strong><span>Advanced analysis & business logic</span></div><div class="metric"><strong>Operations</strong><span>Planning, process & supply chain</span></div><div class="metric"><strong>Optimization</strong><span>Linear programming with Solver</span></div><div class="metric"><strong>Data</strong><span>SQL, BI, Python & statistics</span></div></div>
+    </div></header>
+
+    <section id="projects"><div class="wrap">
+      <div class="section-kicker">Selected project</div><h2>Advanced Excel — Business Data Analysis & Transportation Optimization</h2>
+      <p class="section-lead">A multi-sheet academic model combining business-rule calculations, dynamic reporting and a constrained transportation optimization problem.</p>
+
+      <article class="project">
+        <div class="project-head">
+          <div class="eyebrow">Excel · Operations Research · Data Analysis</div>
+          <h2 style="font-size:34px;margin-bottom:8px">From raw operational data to an optimized shipping plan</h2>
+          <p class="section-lead" style="margin-bottom:0">The workbook processes sales and logistics data, applies tax and pricing rules, converts currencies by date, builds dynamic filtered outputs and uses Solver to minimize vehicle transportation cost across ports and destination cities.</p>
+          <div class="chips"><span class="chip">XLOOKUP / lookup logic</span><span class="chip">Dynamic FILTER</span><span class="chip">Data Validation</span><span class="chip">Conditional Formatting</span><span class="chip">Business Rules</span><span class="chip">Solver</span><span class="chip">Simplex LP</span></div>
+        </div>
+        <div class="project-grid">
+          <div class="content">
+            <h3>What the model handles</h3>
+            <div class="bullet">
+              <div><i class="dot"></i><div><b>Business-rule calculations</b><span>VAT and customs by country, conditional discounts, payment totals, tiered agent commissions and port-storage costs.</span></div></div>
+              <div><i class="dot"></i><div><b>Date-aware foreign exchange</b><span>Converts transaction values using the relevant exchange-rate table while accounting for dates without FX trading.</span></div></div>
+              <div><i class="dot"></i><div><b>Dynamic reporting</b><span>Dropdown-driven selection of currency, country and sales agent feeds a single dynamic report that returns matching records.</span></div></div>
+              <div><i class="dot"></i><div><b>Transportation optimization</b><span>Allocates vehicles from Haifa, Ashdod and Eilat ports to Tel Aviv, Jerusalem and Be’er Sheva while respecting supply and exact-demand constraints.</span></div></div>
+            </div>
+            <div class="actions" style="margin-top:26px"><a class="btn primary" href="files/Omri_Morad_Excel_Project_Public.xlsx" download>Download cleaned workbook</a><a class="btn" href="https://github.com/Moradinho1/Moradinho1.github.io" target="_blank" rel="noreferrer">View repository ↗</a></div>
+          </div>
+          <div class="visual" aria-label="Illustrative spreadsheet preview">
+            <div class="sheet"><div class="sheetbar">Transportation Optimization Model</div><div class="cells"><div class="cell h">Route</div><div class="cell h">Tel Aviv</div><div class="cell h">Jerusalem</div><div class="cell h">Be’er Sheva</div><div class="cell accent">Haifa Port</div><div class="cell">287</div><div class="cell">180</div><div class="cell">779</div><div class="cell accent">Ashdod Port</div><div class="cell">365</div><div class="cell">240</div><div class="cell">631</div><div class="cell accent">Eilat Port</div><div class="cell">618</div><div class="cell">491</div><div class="cell">495</div></div><div class="solver"><div class="solver-row"><span>Objective</span><strong>Minimize total cost</strong></div><div class="solver-row"><span>Method</span><strong>Simplex LP</strong></div><div class="solver-row"><span>Constraints</span><strong>Supply + exact demand</strong></div></div></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="three">
+        <div class="feature"><div class="n">01 · MODELING</div><h4>Multi-sheet architecture</h4><p>Separate sheets for transaction data, tax tables, FX rates, agents, filters and shipping optimization keep inputs, logic and outputs organized.</p></div>
+        <div class="feature"><div class="n">02 · ANALYSIS</div><h4>Operational logic in formulas</h4><p>Rules are implemented through formulas and reference tables rather than hard-coded outputs, making the workbook reusable as inputs change.</p></div>
+        <div class="feature"><div class="n">03 · DECISION SUPPORT</div><h4>Optimization under constraints</h4><p>The final model converts a logistics problem into decision variables, objective cost and capacity/demand constraints for Solver.</p></div>
+      </div>
+      <div class="result"><div><strong>Portfolio version</strong><p>The public workbook is a cleaned copy prepared for recruiter review; the personal student identifier was removed before publication.</p></div><span class="tag">PUBLIC · SAFE TO SHARE</span></div>
+    </div></section>
+
+    <section id="about"><div class="wrap about"><div><div class="section-kicker">About</div><h2>Engineering thinking with an operations mindset.</h2><p>B.Sc. Industrial Engineering & Management, Ruppin Academic Center (2023–2027), specializing in Production and Service Systems in a Digital Environment. Relevant coursework includes Production Planning & Control, Operations Research, Supply Chain Management, Project Management, Simulation, Statistical Quality Assurance, BI & Databases.</p></div><div class="skillbox"><span class="skill">Advanced Excel</span><span class="skill">SQL</span><span class="skill">Python</span><span class="skill">BI</span><span class="skill">SPSS</span><span class="skill">Arena</span><span class="skill">Supply Chain</span><span class="skill">Operations Research</span><span class="skill">Process Analysis</span><span class="skill">Project Management</span></div></div></section>
+  </main>
+
+  <footer><div class="wrap foot"><span>© 2026 Omri Morad · Herzliya, Israel</span><span><a href="mailto:omrim2939@gmail.com">omrim2939@gmail.com</a> · <a href="https://github.com/Moradinho1" target="_blank" rel="noreferrer">GitHub</a></span></div></footer>
+</body>
+</html>
